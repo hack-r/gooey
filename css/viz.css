@@ -1,0 +1,104 @@
+
+$card-width: 350px;
+$card-height: 440px;
+
+#cardsContainer div {
+  position: relative;
+  width: $card-width;
+  height: $card-height;
+}
+
+
+$total: 10;
+$n: 0;
+
+card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #FFFFFF;
+  width: $card-width;
+  height: $card-height;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(#000, 0.2);
+  transform-origin: center;
+  transition: 0.4s cubic-bezier(0.28, 0.55, 0.385, 1.65);
+  cursor: pointer;
+
+  @while $total >= $n {
+    &:nth-child(#{$n + 1}) {
+      z-index: #{$total - $n};
+      top: #{-$n * 15 + "px"};
+      transform-origin: top;
+      transform: scale(#{1 - $n * .1});
+      opacity: #{1 - $n * .1};
+    }
+
+    $n: $n + 1;
+  }
+
+  &:first-child {
+    &:hover {
+      box-shadow: 0 0 20px rgba(#000, 0.4);
+      transform: scale(1.05);
+    }
+  }
+
+  &:last-child {
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
+
+// Not Important
+body {
+  background: linear-gradient(#06A3EA, #2095F2);
+  font-family: 'Open Sans';
+}
+
+.title {
+  padding: 60px 0 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #FFF;
+  text-align: center;
+
+  p {
+    padding: 10px 0 0;
+    font-size: 12px;
+    opacity: 0.8;
+  }
+}
+
+#cardsContainer div {
+  margin: 100px auto;
+}
+
+
+card {
+	transition: transform 200ms ease-in-out, opacity 200ms ease-in-out;
+	will-change: transform, opacity;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 20rem;
+	height: 20rem;
+	display: block;
+}
+
+card.j {
+	background-image: url(http://blogs-images.forbes.com/trevornace/files/2015/11/jupiter-largest-planet-1200x900.jpg);
+}
+
+card.m {
+	background-image: url(http://www.archer-designs.com/temp/mars/mars-1600.jpg);
+}
+
+card.n {
+	background-image: url(http://blogs-images.forbes.com/jillianscudder/files/2016/03/imageneptune_full.jpg);
+}

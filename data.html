@@ -9,14 +9,13 @@
   </head>
 
   <body ng-cloak ng-app="fileUpload" ng-controller="MyCtrl">
-  <h1>Gooey Menu</h1>
+  <h1>Upload Data</h1>
   <h2>Upload training data</h2>
   <link rel="stylesheet" href="css/style.css">
   <button class="file-upload-button" ngf-select="uploadFiles($file, $invalidFiles)"
             accept="image/*">
         Select File</button>
     <br><br>
-    Uploaded File:
     <div style="font:smaller">{{f.name}} {{errFile.name}} {{errFile.$error}} {{errFile.$errorParam}}
         <span class="progress" ng-show="f.progress >= 0">
             <div style="width:{{f.progress}}%"
@@ -30,7 +29,6 @@
         accept="image/*" ngf-max-height="1000" ngf-max-size="1MB">
     Select File</button>
 <br><br>
-Uploaded File:
 <div style="font:smaller">{{f.name}} {{errFile.name}} {{errFile.$error}} {{errFile.$errorParam}}
     <span class="progress" ng-show="f.progress >= 0">
         <div style="width:{{f.progress}}%"
