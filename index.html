@@ -23,11 +23,11 @@
     <span class="hamburger hamburger-3"></span>
   </label>
 
-  <a href="#" class="menu-item"> <i class="fa fa-cog"></i> </a>
-  <a href="data.html" class="menu-item"> <i class="fa fa-upload"></i> </a>
-  <a href="#" class="menu-item"> <i class="fa fa-bar-chart"></i> </a>
-  <a href="#" class="menu-item"> <i class="fa fa-sort-numeric-asc"></i> </a>
   <a href="cards/viz.html" class="menu-item"> <i class="fa fa-eye"></i> </a>
+  <a href="src/scoring.html" class="menu-item"> <i class="fa fa-sort-numeric-asc"></i> </a>
+  <a href="src/training.html" class="menu-item"> <i class="fa fa-bar-chart"></i> </a>
+  <a href="data.html" class="menu-item"> <i class="fa fa-upload"></i> </a>
+  <a href="#" class="menu-item"> <i class="fa fa-info"></i> </a>
 
 </nav>
 
@@ -52,40 +52,42 @@
       </filter>
     </defs>
 </svg>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
-      <!-- Libraries -->
-      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.min.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-aria.min.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-messages.min.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.min.js"></script>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.1/angular-material-icons.min.js"></script>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/SVG-Morpheus/0.1.8/svg-morpheus.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-      <script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-file-upload/2.3.4/angular-file-upload.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/danialfarid-angular-file-upload/12.2.12/ng-file-upload-all.js"></script>
 
-      <script>
-        $(document).ready(function(){
 
-        /*! Fades in whole page on load */
-        $('body').css('display', 'none');
-        $('body').fadeIn(500);
 
-        });
+<!-- Libraries -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-aria.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-messages.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.1/angular-material-icons.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/SVG-Morpheus/0.1.8/svg-morpheus.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-file-upload/2.3.4/angular-file-upload.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/danialfarid-angular-file-upload/12.2.12/ng-file-upload-all.js"></script>
 
-        /*! Fades out the whole page when clicking links */
-      $('a').click(function(e) {
-      e.preventDefault();
-      newLocation = this.href;
-      $('body').fadeOut('slow', newpage);
-      });
-      function newpage() {
-      window.location = newLocation;
-      }
-      </script>
+<script>
+  $(document).ready(function(){
 
-  </body>
+  /*! Fades in whole page on load */
+  $('body').css('display', 'none');
+  $('body').fadeIn(500);
+
+  });
+
+  /*! Fades out the whole page when clicking links */
+$('a').click(function(e) {
+e.preventDefault();
+newLocation = this.href;
+$('body').fadeOut('slow', newpage);
+});
+function newpage() {
+window.location = newLocation;
+}
+</script>
+
+</body>
 </html>
